@@ -84,6 +84,7 @@ checkspeed().then(info => {
 ```
 
 ![CheckSpeed Demo](./assets/checkspeed-usage.png)
+
 The above JSON response includes network information and speed test results.
 
 
