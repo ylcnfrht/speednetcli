@@ -1,9 +1,9 @@
 {
   "name": "speednetcli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "type": "module",
-  "main": "index.js",
+  "main": "cli.js",
   "dependencies": {
     "axios": "^1.6.8",
     "chalk": "^5.3.0",
