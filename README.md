@@ -1,7 +1,5 @@
 # speednetcli - A Professional CLI for Internet Speed Testing
 
-## Overview
-
 **speednetcli** is a high-performance command-line interface (CLI) tool designed to measure and analyze internet speed. It provides precise insights into your network connection, including download/upload speeds, latency (ping), jitter, and detailed network provider information.
 
 ## Features
