@@ -27,7 +27,7 @@ Simply execute the following command in your terminal to run a complete speed te
 speednetcli
 ```
 
-![netspeedemo](./speednetcli.gif)
+![Screenshot](speednetcli.gif)
 
 ### Available Options
 
@@ -100,7 +100,7 @@ speednetcli()
   .catch((error) => console.error('Error:', error));
 ```
 
-![netspeedemo](./speednetcli-usage.png)
+![Screenshot](speednetcli-usage.png)
 
 The above JSON response includes network information and speed test results.
 
