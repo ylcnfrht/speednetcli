@@ -1,6 +1,6 @@
 {
   "name": "speednetcli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "type": "module",
   "main": "index.js",
@@ -11,6 +11,10 @@
     "commander": "^12.0.0",
     "network-speed": "^2.1.1",
     "ping": "^0.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ylcnfrht/speednetcli"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
