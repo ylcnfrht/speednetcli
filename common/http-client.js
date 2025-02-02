@@ -1,9 +1,8 @@
 import ping from 'ping';
 import axios from 'axios';
 import NetworkSpeed from 'network-speed';
-import { ERRORS } from './constants.js';
 
-import { BASE_URL, DOWNLOAD_BYTES_SIZE, UPLOAD_BYTES_SIZE } from './constants.js';
+import { ERRORS, BASE_URL, DOWNLOAD_BYTES_SIZE, UPLOAD_BYTES_SIZE } from './constants.js';
 
 const networkSpeed = new NetworkSpeed();
 

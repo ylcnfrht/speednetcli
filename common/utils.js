@@ -16,7 +16,7 @@ async function showInfo(all, option, label, animationColor, getDataFunc, unit) {
   if (all || option) {
     const animation = animateProcess(`${label} :`, spinners.dots12.frames, animationColor);
     const data = await getDataFunc();
-    console.log(chalk[animationColor].bold(`${data} ${unit ? unit : ''}`));
+    console.log(chalk[animationColor].bold(`${data} ${unit || ''}`));
     clearInterval(animation);
   }
 }

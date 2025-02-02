@@ -1,97 +1,113 @@
-# CheckSpeed CLI Package
+# speednetcli - A Professional CLI for Internet Speed Testing
 
-CheckSpeed is a command-line interface (CLI) tool for checking internet speed and retrieving network information. It provides detailed insights into various aspects of your network connection, including download and upload speeds, latency (ping), jitter, and network provider details.
+## Overview
 
-## Installation
-
-To install CheckSpeed, you need to have Node.js and npm (Node Package Manager) installed on your system. Then, simply run the following command:
-
-```bash
-npm install -g checkspeed
-```
-
-## Usage
-Once installed, you can use checkspeed from the command line. Here's an example of the output you can expect:
-
-just run the following command
-
-```bash
-checkspeed
-```
-
-![CheckSpeed Demo](./assets/checkspeed.gif)
-
+**speednetcli** is a high-performance command-line interface (CLI) tool designed to measure and analyze internet speed. It provides precise insights into your network connection, including download/upload speeds, latency (ping), jitter, and detailed network provider information.
 
 ## Features
 
-- **Speed Test**: Check your internet connection's download and upload speeds.
-- **Ping Test**: Measure the round-trip latency to a server.
-- **Jitter Test**: Assess the variation in ping latency over time.
-- **Network Information**: Retrieve detailed information about your network, including IP address, location, and provider.
+- 🚀 **Speed Test**: Measure your internet's download and upload speeds.
+- ⏳ **Ping Test**: Evaluate network latency with accurate round-trip time measurements.
+- 🎯 **Jitter Test**: Analyze variations in ping times for stability assessment.
+- 🌐 **Network Information**: Retrieve detailed ISP and location-based network insights.
 
+## Installation
 
-### You can use the following options with the CheckSpeed CLI to get needed information
+Ensure you have **Node.js** and **npm** installed. Then, install speednetcli globally:
+
+```bash
+npm install -g speednetcli
+```
+
+## Usage
+
+Simply execute the following command in your terminal to run a complete speed test:
+
+```bash
+speednetcli
+```
+
+![netspeedemo](./speednetcli.gif)
+
+### Available Options
 
 ```text
--d, --download   Check download speed
--u, --upload     Check upload speed
--p, --ping       Check ping
--j, --jitter     Check jitter
--net, --net      Get network information
---help           Display available options
-
+-d, --download   Measure download speed
+-u, --upload     Measure upload speed
+-p, --ping       Measure ping (latency)
+-j, --jitter     Measure jitter
+-net, --net      Retrieve network provider information
+--help           Display all available options
 ```
 
-#### Examples 
+### Example Commands & Outputs
 
-#### checkSpeed -p 
+#### Run a Ping Test
+
 ```bash
-▰▰▰▱▱▱▱ SPEEDTEST STARTED ▰▰▰▰▰▰▱
-⢀⠀ Ping      : 86.270  ms
+speednetcli -p
+```
+
+_Output:_
+
+```bash
+⢀⠀ Ping      : 86.27 ms
 ▰▰▰▰▰▰▰ SPEEDTEST COMPLETED ▰▰▰▰▰▰▰
 ```
 
-#### checkSpeed -u
+#### Check Upload Speed
+
 ```bash
-▰▱▱▱▱▱▱ SPEEDTEST STARTED ▰▱▱▱▱▱▱
-⢈⠩ Upload    : 4.00  Mbps
+speednetcli -u
+```
+
+_Output:_
+
+```bash
+⢈⠩ Upload    : 4.00 Mbps
 ▰▰▰▰▰▰▰ SPEEDTEST COMPLETED ▰▰▰▰▰▰▰
 ```
-#### checkSpeed -net
+
+#### Retrieve Network Information
+
 ```bash
-⢀⠀ Timezone  : Europe/Istanbul 
-⢀⠀ Provider  : AS16135 TURKCELL ILETISIM HIZMETLERI A.S. 
-⢀⠀ IP        : 178.247.81.99 
-⢀⠀ City      : Bursa 
-⢀⠀ Region    : Bursa Province 
-⢀⠀ Postal    : 16250 
-⢀⠀ Location  : 40.1956,29.0601 
-⢀⠀ Country   : TR 
-⢀⠀ Timestamp : 2024-04-19T18:18:49.509Z 
+speednetcli -net
 ```
 
-## Using As Package
-You can also import or require the CheckSpeed package in your JavaScript code to get the information as JSON:
+_Output:_
 
-const checkspeed = require('checkspeed');
+```bash
+⢀⠀ Timezone  : Europe/Istanbul
+⢀⠀ Provider  : AS16135 TURKCELL ILETISIM HIZMETLERI A.S.
+⢀⠀ IP        : 178.247.81.99
+⢀⠀ City      : Bursa
+⢀⠀ Region    : Bursa Province
+⢀⠀ Postal    : 16250
+⢀⠀ Location  : 40.1956,29.0601
+⢀⠀ Country   : TR
+⢀⠀ Timestamp : 2024-04-19T18:18:49.509Z
+```
+
+## Programmatic Usage
+
+You can also integrate speednetcli as a package in your JavaScript/Node.js projects:
 
 ```javascript
-checkspeed().then(info => {
-    console.log(info);
-}).catch(error => {
-    console.error('Error:', error);
-});
+import speednetcli from 'speednetcli';
+
+speednetcli()
+  .then((info) => console.log(info))
+  .catch((error) => console.error('Error:', error));
 ```
 
-![CheckSpeed Demo](./assets/checkspeed-usage.png)
+![netspeedemo](./speednetcli-usage.png)
 
 The above JSON response includes network information and speed test results.
 
-
 ## Contributing
 
-Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue on GitHub or submit a pull request.
+Contributions are welcome! Feel free to open an issue or submit a pull request on GitHub.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.

@@ -66,9 +66,8 @@ main();
 
 process.on('SIGINT', () => { console.log(" SIGINT called"); process.exit(); });
 process.on('uncaughtException', (error) => {
-  console.error(chalk.red('An unhandled error occured: ', JSON.stringify(error)));
+  process.exit();
 });
 process.on('unhandledRejection', (reason, promise) => {
-  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
   process.exit();
 });

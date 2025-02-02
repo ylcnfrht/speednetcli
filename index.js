@@ -1,6 +1,6 @@
 import { getPingStats, getUploadSpeed, getDownloadSpeed, getInternetProvider } from './common/http-client.js';
 
-async function checkspeed() {
+async function speednetcli() {
   try {
     const provider = await getInternetProvider();
     const { avg: avgPing, stddev: avgJitter } = await getPingStats();
@@ -21,4 +21,4 @@ async function checkspeed() {
   }
 }
 
-export default checkspeed;
+export default speednetcli
